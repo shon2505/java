@@ -1,0 +1,88 @@
+// Java Program covering all Unit 1 topics
+
+public class Unit1Example {
+
+    // Main method: entry point (JVM starts here)
+    public static void main(String[] args) {
+
+        // 1. Variables and Data Types
+        int age = 20;
+        float percentage = 85.5f;
+        char grade = 'A';
+        boolean isPass = true;
+        String name = "Shantanu";
+
+        // 2. Printing values
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Percentage: " + percentage);
+        System.out.println("Grade: " + grade);
+        System.out.println("Passed: " + isPass);
+
+        // 3. Operators
+        int a = 10, b = 5;
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Is a greater than b? " + (a > b));
+        System.out.println("Logical AND: " + (a > 5 && b < 10));
+
+        // 4. Control Statements
+        if (percentage > 75) {
+            System.out.println("You got distinction!");
+        } else {
+            System.out.println("Work harder next time.");
+        }
+
+        // Loop - For
+        System.out.println("Numbers from 1 to 5:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+
+        // While loop
+        int count = 1;
+        while (count <= 3) {
+            System.out.println("While loop count: " + count);
+            count++;
+        }
+
+        // Switch case
+        switch (grade) {
+            case 'A': System.out.println("Excellent!"); break;
+            case 'B': System.out.println("Very Good!"); break;
+            default: System.out.println("Keep Trying!");
+        }
+
+        // 5. String methods
+        System.out.println("Length of name: " + name.length());
+        System.out.println("Uppercase name: " + name.toUpperCase());
+
+        // 6. Arrays
+        int[] marks = {85, 90, 78};
+        System.out.println("Marks in subject 1: " + marks[0]);
+        System.out.println("All marks using for loop:");
+        for (int mark : marks) {
+            System.out.println(mark);
+        }
+
+        // 7. Procedural vs OOP
+        // Procedural style:
+        int result = add(5, 10);
+        System.out.println("Procedural addition: " + result);
+
+        // OOP style:
+        Calculator calc = new Calculator();
+        System.out.println("OOP addition: " + calc.add(15, 25));
+    }
+
+    // Procedural function
+    static int add(int x, int y) {
+        return x + y;
+    }
+}
+
+// OOP Class
+class Calculator {
+    int add(int x, int y) {
+        return x + y;
+    }
+}
